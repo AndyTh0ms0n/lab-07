@@ -33,6 +33,8 @@ hist(evals$score, main="Distribution of Scores")
 
 From the visualisation above, it is evident that the distribution is right skewed which therefore shows that students rate courses highly. 
 
+### Exercise 2
+
 ```{r}
 ggplot(evals, aes(x = score, y = bty_avg)) +
   geom_point() +
@@ -43,24 +45,6 @@ ggplot(evals, aes(x = score, y = bty_avg)) +
 ```
 
 A jitter plot helps visualise the relationship between a measurement variable and a categorical variable. The first visualisation is misleading as it doesnt show all the data points as they are overlapping.
-
-### Exercise 2
-
-```{r viz-score-bty, eval = FALSE}
-# add the code for each plot and assign them to the names as outlined below
-# remove eval = FALSE from the code chunk options
-# knit the document, and you'll see them appear next to each other
-# this uses the patchwork package loaded above
-# learn more about patchwork at https://patchwork.data-imaginist.com/
-# it might be useful for your presentations!
-plot_geom_point  <- ggplot(___)
-
-plot_geom_jitter <- ggplot(___)
-
-plot_geom_point + plot_geom_jitter
-```
-
-*Add your narrative here.*
 
 ### Exercise 3
 
