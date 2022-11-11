@@ -50,6 +50,7 @@ A jitter plot helps visualise the relationship between a measurement variable an
 
 ```{r fit-score_bty_fit}
 # remove eval = FALSE from the code chunk options after filling in the blanks
+set.seed(12)
 score_bty_fit <- linear_reg() %>%
   set_engine("lm") %>%
   fit(score ~ bty_avg, data = evals)
@@ -59,8 +60,7 @@ score_bty_fit <- linear_reg() %>%
 # remove eval = FALSE from the code chunk options after filling in the blanks
 tidy(score_bty_fit)
 ```
-
-*Add your linear model here. Don't worry too much about notation, you can use things like score-hat.*
+score^=3.88+0.07(bty_avg)
 
 ### Exercise 4
 
