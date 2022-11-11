@@ -28,10 +28,21 @@ evals<-read.csv("data/evals.csv", row.names=1)
 ### Exercise 1
 
 ```{r viz-score}
-# add code here
+hist(evals$score, main="Distribution of Scores")
 ```
 
-*Add your narrative here.*
+From the visualisation above, it is evident that the distribution is right skewed which therefore shows that students rate courses highly. 
+
+```{r}
+ggplot(evals, aes(x = score, y = bty_avg)) +
+  geom_point() +
+  geom_jitter()
+
+ggplot(evals, aes(x = score, y = bty_avg)) +
+  geom_point() 
+```
+
+A jitter plot helps visualise the relationship between a measurement variable and a categorical variable. The first visualisation is misleading as it doesnt show all the data points as they are overlapping.
 
 ### Exercise 2
 
